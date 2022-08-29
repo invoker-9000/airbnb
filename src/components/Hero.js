@@ -1,5 +1,5 @@
 import React from "react"
-import hero from "../images/group77.png"
+import hero from "../group77.png"
 
 export default function Hero(){
 

@@ -26,6 +26,7 @@ nav{
 section{
   padding: 20px;
 }
+
 .hero--container{
   display: flex;
   flex-direction: column;
@@ -41,14 +42,44 @@ section{
 .hero--content{
   margin-top: 0;
 }
+
+.bigcard--container{
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: auto;
+}
 .card--container{
   width: 175px;
   font-size: 12px;
-
+  flex: 0 0 auto;         /* ADD */
+  display: flex;          /* ADD */
+  flex-direction: column; /* ADD */
+  position: relative;
+}
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 .card--image{
+ 
+    margin-bottom: 9px;
   width: 100%;
   border-radius: 9px;
+}
+.card--title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card--price {
+  margin-top: auto;
 }
 .card--stats{
   display: flex;

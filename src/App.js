@@ -1,35 +1,30 @@
 import React from "react"
 import Navbar from "./components/Navbar"
-// import Hero from "./components/Hero"
+import Hero from "./components/Hero"
 import Card from "./components/Card"
-import katie from "./images/katie.png"
-import star from "./images/star1.png"
-import wedding from "./images/wedding.png"
+import data from "./data"
 
 export default function App() {
+  const cards = data.map(element=> {
+   
     return (
-          /* <Hero /> */
-        <div>
-          <Navbar />
-          <Card 
-          rating={5.0}
-          review={6} 
-          location="USA" 
-          content="Life Lessons with Katie Zaferes"
-          price={136}
-          img={katie}
-          star={star}
-          />
-          <Card
-          rating={5.0}
-          review={30}
-          location="USA"
-          content="Learn wedding photography"
-          price={125}
-          img={wedding}
+      <Card
+      key={element.id}
+      item={element}
+      />
+      )
+  });
+    return (
           
-          />
+        <div className="body--container">
+          <Navbar />
+          <Hero/>
+          <div className="bigcard--container">
+       
+         {cards}
+        
 
+          </div>
         </div>
     )
 }
